@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sortVisible</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div id="control">
+        <div id="container_range" class="container">
+            <label for="range">&nbsp;&nbsp; range: </label>
+            <select name="range" id="range" class="select">
+                <option value="0-10">0-10</option>
+                <option value="0-50">0-50</option>
+                <option value="0-100">0-100</option>
+            </select>
+        </div>
+        <div id="container_stepRate" class="container">
+            <label for="stepRate">stepRate:</label>
+            <input type="text" id="stepRate" class="input" >
+        </div>
+        <button id="init" class="btn">init</button>
+        <div id="container_method" class="container">
+            <label for="method">method: </label>
+            <select name="method" id="method" class="select">
+                <option value="quickSort">快速排序</option>
+                <option value="bubbleSort">冒泡排序</option>
+                <option value="selectionSort">选择排序</option>
+                <option value="insertionSort">插入排序</option>
+                <option value="shellSort">希尔排序</option>
+                <option value="mergingSort">归并排序</option>
+                <option value="heapSort">堆排序</option>
+            </select>
+        </div>
+        <button id="start" class="btn">start</button>
+        <div id="container_time" class="container">
+            <label for="time">time: </label>
+            <input type="text" id="time" class="input" value="0">
+        </div>
+    </div>
+    <div id="display">
+        <canvas id="canvas" width="900" height="450">
+            <span>您的浏览器不支持canvas，请切换浏览器</span>
+        </canvas>
+    </div>
+<script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
