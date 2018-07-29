@@ -5,7 +5,7 @@ const config = {
     entry: {
         main: "./src/main.js"
     },
-    mode: 'development',
+    mode: process.env.NODE_ENV,
     output: {
         filename: '[name].bundle.js',
         path: __dirname + '/dist'
@@ -27,10 +27,14 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'sortVisible',
-            filename: 'main.html',
+            filename: 'index.html',
             template: './index.html'
         })
-    ]
+    ],
+    devServer: {
+        compress: true,
+        port: 9000
+    }
 }
 
 module.exports = config;
