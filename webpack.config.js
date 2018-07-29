@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     entry: {
-        main: "./lib/main.js"
+        main: "./src/main.js"
     },
+    mode: 'development',
     output: {
         filename: '[name].bundle.js',
         path: __dirname + '/dist'
