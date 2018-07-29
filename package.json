@@ -26,8 +26,10 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
+    "lib": "babel src -d lib",
     "lint": "eslint --ext .js src --fix",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot",
-    "precommit": "yarn run lint"
+    "precommit": "yarn run lint",
+    "prepublish": "yarn run lib"
   }
 }
