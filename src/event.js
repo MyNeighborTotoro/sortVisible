@@ -52,6 +52,9 @@ function clickStart(){
             case 'shellSort' :
                 shellSort( array, arrayList );
                 break;
+            case 'quickSort' :
+                quickSort( array, arrayList );
+                break;
         }
     }else{
         alert('请先init');
