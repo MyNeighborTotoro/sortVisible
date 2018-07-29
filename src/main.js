@@ -1,15 +1,12 @@
 
-import '../css/index.css';
+import '../css/index.css'
 
-import { clickInit, clickStart } from './event';
+import { clickInit, clickStart } from './event'
 
+window.onload = function () {
+  let initBtn = document.querySelector('#init')
+  initBtn.addEventListener('click', clickInit)
 
-window.onload = function(){
-    
-    let initBtn = document.querySelector('#init');
-    initBtn.addEventListener('click', clickInit);
-
-    let startBtn = document.querySelector('#start');
-    startBtn.addEventListener('click', clickStart);
-
+  let startBtn = document.querySelector('#start')
+  startBtn.addEventListener('click', clickStart)
 }
