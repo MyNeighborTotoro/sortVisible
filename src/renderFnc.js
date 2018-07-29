@@ -14,6 +14,7 @@ function renderArray( array, compareArray ){
 
     let cWidth = canvas.width;
     let cHeight = canvas.height;
+    canvas.height = canvas.height;
     ctx.clearRect(0, 0, cWidth, cHeight);
 
     let c1 = compareArray[0];
@@ -43,6 +44,7 @@ function renderArrayWithPivot( array, compareArray, pivot ){
     let cWidth = canvas.width;
     let cHeight = canvas.height;
     ctx.clearRect(0, 0, cWidth, cHeight);
+    canvas.height = canvas.height;
 
     let c1 = compareArray[0];
     let c2 = compareArray[1];
@@ -56,10 +58,6 @@ function renderArrayWithPivot( array, compareArray, pivot ){
         if( index == c1 || index == c2 ){
             ctx.fillStyle = "rgb(253, 205, 141)";
         }else if( index == pivot ){
-            ctx.strokeStyle = "rgb(240, 131, 231)";
-            ctx.moveTo( 0, cHeight-item );
-            ctx.lineTo( cWidth, cHeight-item );
-            ctx.strkoe();
             ctx.fillStyle = "rgb(240, 131, 231)";
         }else{
             ctx.fillStyle = "rgb(131, 240, 198)";
@@ -68,6 +66,13 @@ function renderArrayWithPivot( array, compareArray, pivot ){
         ctx.strokeStyle = "black";
         ctx.fillRect( x, y, w, h );
         ctx.strokeRect( x, y, w, h );
+
+        // if( index == array.length-1 ){
+        //     ctx.strokeStyle = "rgb(240, 131, 231)";
+        //     ctx.moveTo( 0, cHeight-array[pivot] );
+        //     ctx.lineTo( cWidth, cHeight-[array-pivot] );
+        //     ctx.stroke();
+        // }
     } )
 
 }
